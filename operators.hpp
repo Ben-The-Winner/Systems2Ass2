@@ -37,4 +37,3 @@ Graph operator*(const Graph& , int );
 
 Graph operator*(const Graph& , const Graph& ) ;
 
-Graph print(const Graph& );
