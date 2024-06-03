@@ -10,7 +10,7 @@ Graph operator+(const Graph& g1, const Graph& g2)
 {
     if(g1.adjMatrix.size() != g2.adjMatrix.size() || g1.adjMatrix[0].size() != g2.adjMatrix[0].size() || g1.adjMatrix.size() != g1.adjMatrix[0].size())
     {
-        throw invalid_argument("can't multiply");; 
+        throw invalid_argument("can't add");; 
     }
 
     Graph result(g1); 
@@ -344,20 +344,5 @@ Graph operator*(const Graph& g1, const Graph& g2)
 }
 
 
-Graph print(const Graph& g)
-{
-  int countE = 0;
-  
-  for(int i = 0; i < g.adjMatrix.size(); i++) 
-  {
-    for(int j = 0; j < g.adjMatrix.size(); j++) 
-    {
-      if(g.adjMatrix[i][j] != 0)
-        countE++;
-    }
-  }
 
-  cout << "the number of vertices is " << g.adjMatrix.size() << endl;
-  cout << "the number of edges is " << countE << endl;
 
-}
